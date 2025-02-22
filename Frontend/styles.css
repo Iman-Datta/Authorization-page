@@ -1,0 +1,64 @@
+/* totaly using AI */
+/* General Styles*/
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Input Fields */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Toggle Links */
+.toggle {
+    cursor: pointer;
+    color: #ffcc00;
+    margin-top: 10px;
+}
+
+.toggle:hover {
+    text-decoration: underline;
+}
+
+/* Hide Registration by Default */
+.hidden {
+    display: none;
+}

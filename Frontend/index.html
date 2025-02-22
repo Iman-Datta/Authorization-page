@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div id="login-container">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p id="message"></p>
+            <p class="toggle" onclick="showRegister()">Create an account</p>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="register-container" class="hidden">
+            <h2>Register</h2>
+            <input type="text" id="reg-username" placeholder="Username">
+            <input type="text" id="first-name" placeholder="First Name">
+            <input type="text" id="last-name" placeholder="Last Name">
+            <input type="password" id="reg-password" placeholder="Password">
+            <button onclick="registerUser()">Register</button>
+            <p id="reg-message"></p>
+            <p class="toggle" onclick="showLogin()">Already have an account? Login</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function showRegister() {
+            document.getElementById("login-container").classList.add("hidden");
+            document.getElementById("register-container").classList.remove("hidden");
+        }
+
+        function showLogin() {
+            document.getElementById("register-container").classList.add("hidden");
+            document.getElementById("login-container").classList.remove("hidden");
+        }
+
+        function registerUser() {
+            const username = document.getElementById("reg-username").value;
+            const firstName = document.getElementById("first-name").value;
+            const lastName = document.getElementById("last-name").value;
+            const password = document.getElementById("reg-password").value;
+            register(username, firstName, lastName, password);
+        }
+    </script>
+</body>
+</html>
